@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#"
+     xml:base="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:unti="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted">
+        <rdfs:comment>a</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasOrganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasSector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasSector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#energySector"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#sector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextDefinedByActorRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextDefinedByActorRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextDefinedByActorType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextDefinedByActorType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextDefinedBySector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextDefinedBySector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#sector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextUserAttentionFocus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#contextUserAttentionFocus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#userAtentionFocus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasSender"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorHasContext"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasLog -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasLog">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataLog"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasReceiver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasReceiver">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Receiver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasSender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasSender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Sender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasTerm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasTerm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasLanguage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasMeaningByContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasMeaningByContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#byContext"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasTerm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataHasContext"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasMeaningByLiteralDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasMeaningByLiteralDefinition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasWrittenContent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termHasWrittenContent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContentString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContentString">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termContent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Neutral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Neutral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Receiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Receiver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Sender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Sender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorRole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#byContext -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#byContext">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#meaning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#company">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#companyOwned -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#companyOwned">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#distributedEnergyResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#distributedEnergyResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#distributedEnergyResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#energySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#energySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataLog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedDataLog">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#individual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#individual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#industrySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#industrySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#language">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#meaning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#meaning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#powerPlant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#powerPlant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#privatelyOwned -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#privatelyOwned">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#distributedEnergyResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#sector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#sector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#userAtentionFocus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#userAtentionFocus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <rdfs:comment>The task being executed is called the user&apos;s focus of attention, indicating what should be considered in the context of that user.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Sender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <actorHasType rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeDER"/>
+        <unti:actorHasContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+        <unti:contextDefinedByActorType rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorEnergyCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorEnergyCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#Receiver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeDER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeDER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#distributedEnergyResource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeUnknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#actorType"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#byContext"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextEnergyCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextEnergyCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#context"/>
+        <unti:contextDefinedByActorType rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeUnknown"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedDataHouseholdToCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedDataHouseholdToCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+        <unti:exchangedDataHasReceiver rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorEnergyCompany"/>
+        <unti:exchangedDataHasSender rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorDERHousehold"/>
+        <unti:exchangedDataHasTerm rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermGridConnection"/>
+        <unti:exchangedDataHasTerm rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermNetMetering"/>
+        <unti:exchangedDataHasTerm rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermStorage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermGridConnection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermGridConnection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermNetMetering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermNetMetering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermStorage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermStorage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37#termContent"/>
+        <unti:termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

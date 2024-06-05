@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted"
+         xmlns="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</rdfs:comment>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#actorHasContext">
+  <rdfs:domain rdf:resource="#actor"/>
+  <rdfs:range rdf:resource="#context"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#actorHasOrganization">
+  <rdfs:domain rdf:resource="#actor"/>
+  <rdfs:range rdf:resource="#organization"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#actorHasRole">
+  <rdfs:domain rdf:resource="#actor"/>
+  <rdfs:range rdf:resource="#actorRole"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#actorHasSector">
+  <rdfs:domain rdf:resource="#actor"/>
+  <rdfs:range rdf:resource="#energySector"/>
+  <rdfs:range rdf:resource="#sector"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#actorHasType">
+  <rdfs:domain rdf:resource="#actor"/>
+  <rdfs:range rdf:resource="#actorType"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contextDefinedByActorRole">
+  <rdfs:domain rdf:resource="#context"/>
+  <rdfs:range rdf:resource="#actorRole"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contextDefinedByActorType">
+  <rdfs:domain rdf:resource="#context"/>
+  <rdfs:range rdf:resource="#actorType"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contextDefinedBySector">
+  <rdfs:domain rdf:resource="#context"/>
+  <rdfs:range rdf:resource="#sector"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contextUserAttentionFocus">
+  <rdfs:domain rdf:resource="#context"/>
+  <rdfs:range rdf:resource="#userAtentionFocus"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exchangedDataHasContext">
+  <rdfs:domain rdf:resource="#exchangedData"/>
+  <rdfs:range rdf:resource="#context"/>
+  <owl:propertyChainAxiom>
+    <rdf:Description>
+      <rdf:first rdf:resource="#exchangedDataHasSender"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#actorHasContext"/>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exchangedDataHasSender">
+  <rdfs:domain rdf:resource="#exchangedData"/>
+  <rdfs:range rdf:resource="#Sender"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exchangedDataHasLog">
+  <rdfs:domain rdf:resource="#exchangedData"/>
+  <rdfs:range rdf:resource="#exchangedDataLog"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exchangedDataHasReceiver">
+  <rdfs:domain rdf:resource="#exchangedData"/>
+  <rdfs:range rdf:resource="#Receiver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exchangedDataHasTerm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdfs:domain rdf:resource="#exchangedData"/>
+  <rdfs:range rdf:resource="#term"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#termHasLanguage">
+  <rdfs:domain rdf:resource="#term"/>
+  <rdfs:range rdf:resource="#language"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#termHasMeaningByContext">
+  <rdfs:domain rdf:resource="#term"/>
+  <rdfs:range rdf:resource="#byContext"/>
+  <owl:propertyChainAxiom>
+    <rdf:Description>
+      <rdf:first rdf:resource="#exchangedDataHasTerm"/>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first rdf:resource="#exchangedDataHasContext"/>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#termHasMeaningByLiteralDefinition">
+  <rdfs:domain rdf:resource="#term"/>
+  <rdfs:range rdf:resource="#term"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#termHasWrittenContent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdfs:domain rdf:resource="#term"/>
+  <rdfs:range rdf:resource="#termContent"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#termContentString">
+  <rdfs:domain rdf:resource="#term"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#termLexicon">
+  <rdfs:domain rdf:resource="#term"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+
+<owl:Class rdf:about="#actor"/>
+
+<owl:Class rdf:about="#context"/>
+
+<owl:Class rdf:about="#organization">
+  <rdfs:subClassOf rdf:resource="#actor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#actorRole">
+  <rdfs:subClassOf rdf:resource="#actor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#energySector">
+  <rdfs:subClassOf rdf:resource="#sector"/>
+</owl:Class>
+
+<owl:Class rdf:about="#sector">
+  <rdfs:subClassOf rdf:resource="#actor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#actorType">
+  <rdfs:subClassOf rdf:resource="#actor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#userAtentionFocus">
+  <rdfs:subClassOf rdf:resource="#context"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The task being executed is called the user's focus of attention, indicating what should be considered in the context of that user.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#exchangedData"/>
+
+<owl:Class rdf:about="#Sender">
+  <rdfs:subClassOf rdf:resource="#actorRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="#exchangedDataLog">
+  <rdfs:subClassOf rdf:resource="#exchangedData"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Receiver">
+  <rdfs:subClassOf rdf:resource="#actorRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="#term"/>
+
+<owl:Class rdf:about="#language">
+  <rdfs:subClassOf rdf:resource="#term"/>
+</owl:Class>
+
+<owl:Class rdf:about="#byContext">
+  <rdfs:subClassOf rdf:resource="#meaning"/>
+</owl:Class>
+
+<owl:Class rdf:about="#termContent">
+  <rdfs:subClassOf rdf:resource="#term"/>
+</owl:Class>
+
+<owl:Class rdf:about="#meaning">
+  <rdfs:subClassOf rdf:resource="#term"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Neutral">
+  <rdfs:subClassOf rdf:resource="#actorRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="#company">
+  <rdfs:subClassOf rdf:resource="#organization"/>
+</owl:Class>
+
+<owl:Class rdf:about="#companyOwned">
+  <rdfs:subClassOf rdf:resource="#distributedEnergyResource"/>
+</owl:Class>
+
+<owl:Class rdf:about="#distributedEnergyResource">
+  <rdfs:subClassOf rdf:resource="#actorType"/>
+</owl:Class>
+
+<owl:Class rdf:about="#individual">
+  <rdfs:subClassOf rdf:resource="#organization"/>
+</owl:Class>
+
+<owl:Class rdf:about="#industrySector">
+  <rdfs:subClassOf rdf:resource="#sector"/>
+</owl:Class>
+
+<owl:Class rdf:about="#powerPlant">
+  <rdfs:subClassOf rdf:resource="#actorType"/>
+</owl:Class>
+
+<owl:Class rdf:about="#privatelyOwned">
+  <rdfs:subClassOf rdf:resource="#distributedEnergyResource"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Term">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#ActorDERHousehold">
+  <rdf:type rdf:resource="#Sender"/>
+  <rdf:type rdf:resource="#context"/>
+  <actorHasContext rdf:resource="#ContextDERHousehold"/>
+  <actorHasType rdf:resource="#ActorTypeDER"/>
+  <contextDefinedByActorType rdf:resource="#ContextDERHousehold"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ContextDERHousehold">
+  <rdf:type rdf:resource="#actorType"/>
+  <rdf:type rdf:resource="#byContext"/>
+  <rdf:type rdf:resource="#context"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ActorTypeDER">
+  <rdf:type rdf:resource="#distributedEnergyResource"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ActorEnergyCompany">
+  <rdf:type rdf:resource="#Receiver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ActorTypeCompany">
+  <rdf:type rdf:resource="#actorType"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ContextEnergyCompany">
+  <rdf:type rdf:resource="#company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ContextUnknown">
+  <rdf:type rdf:resource="#context"/>
+  <rdf:type rdf:resource="#byContext"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ExchangedDataHouseholdToCompany">
+  <rdf:type rdf:resource="#exchangedData"/>
+  <rdf:type rdf:resource="#term"/>
+  <exchangedDataHasReceiver rdf:resource="#ActorEnergyCompany"/>
+  <exchangedDataHasSender rdf:resource="#ActorDERHousehold"/>
+  <exchangedDataHasTerm rdf:resource="#ExchangedTermGridConnection"/>
+  <exchangedDataHasTerm rdf:resource="#ExchangedTermNetMetering"/>
+  <exchangedDataHasTerm rdf:resource="#ExchangedTermStorage"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ExchangedTermGridConnection">
+  <rdf:type rdf:resource="#exchangedData"/>
+  <rdf:type rdf:resource="#term"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ExchangedTermNetMetering">
+  <rdf:type rdf:resource="#exchangedData"/>
+  <rdf:type rdf:resource="#term"/>
+  <termHasMeaningByContext rdf:resource="#ContextDERHousehold"/>
+  <termLexicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank</termLexicon>
+  <termContentString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sloping land (especially the slope beside a body of water)</termContentString>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ExchangedTermStorage">
+  <rdf:type rdf:resource="#exchangedData"/>
+  <rdf:type rdf:resource="#term"/>
+  <rdf:type rdf:resource="#termContent"/>
+  <termHasMeaningByContext rdf:resource="#ContextDERHousehold"/>
+  <termLexicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storage</termLexicon>
+  <termContentString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cells</termContentString>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TermNetGridConnectionDERHousehold">
+  <rdf:type rdf:resource="#term"/>
+  <termHasMeaningByContext rdf:resource="#ContextUnknown"/>
+  <termContentString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></termContentString>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TermNetMeteringDERHousehold">
+  <rdf:type rdf:resource="#term"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TermStorageMeaningDERHousehold">
+  <rdf:type rdf:resource="#term"/>
+  <rdf:type rdf:resource="#termContent"/>
+  <termHasMeaningByContext rdf:resource="#ContextDERHousehold"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TermStorageMeaningEnergyCompany">
+  <rdf:type rdf:resource="#term"/>
+  <termHasMeaningByContext rdf:resource="#ContextDERHousehold"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#term1">
+  <rdf:type rdf:resource="#term"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#termTest">
+  <rdf:type rdf:resource="#Term"/>
+  <rdf:type rdf:resource="#term"/>
+  <termLexicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test lexicon</termLexicon>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

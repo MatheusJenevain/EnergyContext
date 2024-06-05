@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37">
+    <Prefix name="" IRI="http://www.semanticweb.org/matheus/ontologies/2023/10/untitled-ontology-37/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>a</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#actorType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#byContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#companyOwned"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#distributedEnergyResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#energySector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#exchangedData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#exchangedDataContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#exchangedDataSender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#exchangedTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#individual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#industrySector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#meaning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#powerPlant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#privatelyOwned"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#term"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#userAtentionFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SectorActor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actorBelongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actorContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actorHas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actorOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actorSector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#actorType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contextActorType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contextRepresents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contextSector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contextUserAttentionFocus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exchangedContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exchangedReceiver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exchangedSender"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exchangedTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#meaningByContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sectoContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sectorDefines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sectorHas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#termHas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#termLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#termMeaning"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ContextUserAttentionFocusDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#termContent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#actorEnergy1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#contextEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#contextIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exchangedData1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exchangedDataContext1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exchangedDataSender1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#exchangedDataTerm1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sectorEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sectorEnergyIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sectorIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#termEnergyStorage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#termMeaningEnergyStorage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#termMeaningIndustryStorage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#actorType"/>
+        <Class IRI="#actor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#byContext"/>
+        <Class IRI="#meaning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#company"/>
+        <Class IRI="#organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#companyOwned"/>
+        <Class IRI="#distributedEnergyResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#content"/>
+        <Class IRI="#term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#distributedEnergyResource"/>
+        <Class IRI="#actorType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#energySector"/>
+        <Class IRI="#sector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#exchangedDataContext"/>
+        <Class IRI="#exchangedData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#exchangedDataSender"/>
+        <Class IRI="#exchangedData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#exchangedTerm"/>
+        <Class IRI="#exchangedData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#individual"/>
+        <Class IRI="#organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#industrySector"/>
+        <Class IRI="#sector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#language"/>
+        <Class IRI="#term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#meaning"/>
+        <Class IRI="#term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#organization"/>
+        <Class IRI="#actor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#powerPlant"/>
+        <Class IRI="#actorType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#privatelyOwned"/>
+        <Class IRI="#distributedEnergyResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sector"/>
+        <Class IRI="#actor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#userAtentionFocus"/>
+        <Class IRI="#context"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#actor"/>
+        <NamedIndividual IRI="#actorEnergy1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#context"/>
+        <NamedIndividual IRI="#contextEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#context"/>
+        <NamedIndividual IRI="#contextIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#exchangedData"/>
+        <NamedIndividual IRI="#exchangedData1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#exchangedDataSender"/>
+        <NamedIndividual IRI="#exchangedDataSender1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#energySector"/>
+        <NamedIndividual IRI="#sectorEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#sector"/>
+        <NamedIndividual IRI="#sectorEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#energySector"/>
+        <NamedIndividual IRI="#sectorEnergyIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#sector"/>
+        <NamedIndividual IRI="#sectorEnergyIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#sector"/>
+        <NamedIndividual IRI="#sectorIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#term"/>
+        <NamedIndividual IRI="#termEnergyStorage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#term"/>
+        <NamedIndividual IRI="#termMeaningEnergyStorage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#term"/>
+        <NamedIndividual IRI="#termMeaningIndustryStorage"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#actorSector"/>
+        <NamedIndividual IRI="#actorEnergy1"/>
+        <NamedIndividual IRI="#sectorEnergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contextSector"/>
+        <NamedIndividual IRI="#contextEnergy"/>
+        <NamedIndividual IRI="#contextEnergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#contextSector"/>
+        <NamedIndividual IRI="#contextIndustry"/>
+        <NamedIndividual IRI="#sectorIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#SectorActor"/>
+        <NamedIndividual IRI="#sectorEnergy"/>
+        <NamedIndividual IRI="#actorEnergy1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sectorDefines"/>
+        <NamedIndividual IRI="#sectorEnergy"/>
+        <NamedIndividual IRI="#contextEnergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#meaningByContext"/>
+        <NamedIndividual IRI="#termMeaningEnergyStorage"/>
+        <NamedIndividual IRI="#contextEnergy"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#termContent"/>
+        <NamedIndividual IRI="#termMeaningEnergyStorage"/>
+        <Literal>cells for energy storage</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SectorActor"/>
+        <ObjectProperty IRI="#sectorHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#actorContext"/>
+        <ObjectProperty IRI="#actorHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#actorOrganization"/>
+        <ObjectProperty IRI="#actorBelongsTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#actorSector"/>
+        <ObjectProperty IRI="#actorBelongsTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#actorType"/>
+        <ObjectProperty IRI="#actorHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contextActorType"/>
+        <ObjectProperty IRI="#contextRepresents"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contextSector"/>
+        <ObjectProperty IRI="#contextRepresents"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contextUserAttentionFocus"/>
+        <ObjectProperty IRI="#contextRepresents"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exchangedContext"/>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exchangedReceiver"/>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exchangedSender"/>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exchangedTerm"/>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#meaningByContext"/>
+        <ObjectProperty IRI="#termMeaning"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sectoContext"/>
+        <ObjectProperty IRI="#sectorDefines"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sectorHas"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#termLanguage"/>
+        <ObjectProperty IRI="#termHas"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#termMeaning"/>
+        <ObjectProperty IRI="#termHas"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#SectorActor"/>
+        <Class IRI="#sector"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actorBelongsTo"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actorContext"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actorHas"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actorOrganization"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actorSector"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#actorType"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contextActorType"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contextRepresents"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contextSector"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contextUserAttentionFocus"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exchangedContext"/>
+        <Class IRI="#exchangedData"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+        <Class IRI="#exchangedData"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exchangedReceiver"/>
+        <Class IRI="#exchangedData"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exchangedSender"/>
+        <Class IRI="#exchangedData"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#exchangedTerm"/>
+        <Class IRI="#exchangedData"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#meaningByContext"/>
+        <Class IRI="#meaning"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sectoContext"/>
+        <Class IRI="#sector"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sectorDefines"/>
+        <Class IRI="#sector"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sectorHas"/>
+        <Class IRI="#sector"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#termHas"/>
+        <Class IRI="#term"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#termLanguage"/>
+        <Class IRI="#term"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#termMeaning"/>
+        <Class IRI="#term"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SectorActor"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorBelongsTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorContext"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorHas"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorOrganization"/>
+        <Class IRI="#organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorSector"/>
+        <Class IRI="#energySector"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorSector"/>
+        <Class IRI="#sector"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#actorType"/>
+        <Class IRI="#actorType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contextActorType"/>
+        <Class IRI="#actorType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contextRepresents"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contextSector"/>
+        <Class IRI="#sector"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contextUserAttentionFocus"/>
+        <Class IRI="#userAtentionFocus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exchangedContext"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exchangedDataHas"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exchangedReceiver"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exchangedSender"/>
+        <Class IRI="#actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#exchangedTerm"/>
+        <Class IRI="#term"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#meaningByContext"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sectoContext"/>
+        <Class IRI="#context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sectorHas"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#termHas"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#termLanguage"/>
+        <Class IRI="#language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#termMeaning"/>
+        <Class IRI="#meaning"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#actorSector"/>
+            <ObjectProperty IRI="#contextSector"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#actorContext"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ContextUserAttentionFocusDescription"/>
+        <Class IRI="#userAtentionFocus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#termContent"/>
+        <Class IRI="#content"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#ContextUserAttentionFocusDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#termContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>if actor is in a sector, and the sector defines a context, then the actor belongs to that context</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#actor"/>
+                <Variable IRI="/a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#actorSector"/>
+                <Variable IRI="/a"/>
+                <Variable IRI="/s"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#contextSector"/>
+                <Variable IRI="/s"/>
+                <Variable IRI="/c"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#actorContext"/>
+                <Variable IRI="/a"/>
+                <Variable IRI="/c"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>if the sender is in an sector, and the sector is in a context, then the term sent has the same context</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#exchangedDataSender"/>
+                <Variable IRI="/es"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#actorSector"/>
+                <Variable IRI="/a"/>
+                <Variable IRI="/s"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#contextSector"/>
+                <Variable IRI="/s"/>
+                <Variable IRI="/ct"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#exchangedTerm"/>
+                <Variable IRI="/t"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#meaningByContext"/>
+                <Variable IRI="/t"/>
+                <Variable IRI="/ct"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>the exchanged data sender has an actor that belongs to a sector, that is in a context. in conclusion, the exchanged term belongs to that context.</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#exchangedDataSender"/>
+                <Variable IRI="/s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#actorSector"/>
+                <Variable IRI="/s"/>
+                <Variable IRI="/as"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#exchangedTerm"/>
+                <Variable IRI="/m"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#contextSector"/>
+                <Variable IRI="/as"/>
+                <Variable IRI="/cs"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#meaningByContext"/>
+                <Variable IRI="/m"/>
+                <Variable IRI="/cs"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>if the sender is in an sector, and the sector is in a context, then the exchangedDataContext has the same context</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#exchangedDataSender"/>
+                <Variable IRI="/s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#actorSector"/>
+                <Variable IRI="/s"/>
+                <Variable IRI="/a"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#contextSector"/>
+                <Variable IRI="/a"/>
+                <Variable IRI="/c"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#exchangedContext"/>
+                <Variable IRI="/s"/>
+                <Variable IRI="/c"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#userAtentionFocus</IRI>
+        <Literal>The task being executed is called the user&apos;s focus of attention, indicating what should be considered in the context of that user.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

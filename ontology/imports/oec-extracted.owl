@@ -1,0 +1,650 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#"
+     xml:base="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted">
+        <rdfs:comment>a</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasOrganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasSector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasSector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#energySector"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextDefinedByActorRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextDefinedByActorRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextDefinedByActorType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextDefinedByActorType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextDefinedBySector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextDefinedBySector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextUserAttentionFocus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#contextUserAttentionFocus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#userAtentionFocus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasSender"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorHasContext"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasLog -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasLog">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataLog"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasReceiver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasReceiver">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Receiver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasSender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasSender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Sender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasTerm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasTerm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasLanguage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasMeaningByContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasMeaningByContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#byContext"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasTerm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataHasContext"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasMeaningByLiteralDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasMeaningByLiteralDefinition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasWrittenContent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termHasWrittenContent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termSentBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termSentBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Sender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContentString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContentString">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termLexiconString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termLexiconString">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termMeaningString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termMeaningString">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Neutral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Neutral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Receiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Receiver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Sender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Sender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorRole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#byContext -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#byContext">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#meaning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#company">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#companyOwned -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#companyOwned">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#distributedEnergyResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#distributedEnergyResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#distributedEnergyResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#energySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#energySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataLog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedDataLog">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#individual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#individual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#industrySector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#industrySector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#language">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#meaning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#meaning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#powerPlant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#powerPlant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#privatelyOwned -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#privatelyOwned">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#distributedEnergyResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#userAtentionFocus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#userAtentionFocus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <rdfs:comment>The task being executed is called the user&apos;s focus of attention, indicating what should be considered in the context of that user.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Sender"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+        <actorHasContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+        <actorHasSector rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#SectorEnergy"/>
+        <actorHasType rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeDER"/>
+        <contextDefinedByActorType rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorEnergyCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorEnergyCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#Receiver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeDER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorTypeDER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#distributedEnergyResource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorType"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#byContext"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextEnergyCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextEnergyCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#byContext"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#context"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedDataHouseholdToCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedDataHouseholdToCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <exchangedDataHasReceiver rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorEnergyCompany"/>
+        <exchangedDataHasSender rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ActorDERHousehold"/>
+        <exchangedDataHasTerm rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermGridConnection"/>
+        <exchangedDataHasTerm rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermNetMetering"/>
+        <exchangedDataHasTerm rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermStorage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermGridConnection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermGridConnection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown"/>
+        <termContentString>a drawback or difficulty that is not readily evident</termContentString>
+        <termLexiconString>catch</termLexiconString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermNetMetering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermNetMetering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+        <termSentBy rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorCoal"/>
+        <termContentString></termContentString>
+        <termLexiconString>bank</termLexiconString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermStorage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ExchangedTermStorage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContent"/>
+        <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+        <termSentBy rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorCoal"/>
+        <termLexiconString>Storage</termLexiconString>
+        <termMeaningString></termMeaningString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#SectorEnergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#SectorEnergy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#energySector"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#sector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermNetGridConnectionDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermNetGridConnectionDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermNetMeteringDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermNetMeteringDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermStorageMeaningDERHousehold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermStorageMeaningDERHousehold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#termContent"/>
+        <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermStorageMeaningEnergyCompany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#TermStorageMeaningEnergyCompany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
+        <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorCoal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorCoal">
+        <actorHasContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextEnergyCompany"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
