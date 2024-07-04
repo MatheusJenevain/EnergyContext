@@ -559,7 +559,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
         <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown"/>
-        <termLexiconString>Grid Connection</termLexiconString>
+        <termLexiconString>grid connection</termLexiconString>
     </owl:NamedIndividual>
     
 
