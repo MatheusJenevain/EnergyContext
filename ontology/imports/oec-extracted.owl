@@ -559,8 +559,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#exchangedData"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
         <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextUnknown"/>
-        <termContentString>a drawback or difficulty that is not readily evident</termContentString>
-        <termLexiconString>catch</termLexiconString>
+        <termLexiconString>Grid Connection</termLexiconString>
     </owl:NamedIndividual>
     
 
@@ -572,8 +571,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#term"/>
         <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
         <termSentBy rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorCoal"/>
-        <termContentString></termContentString>
-        <termLexiconString>bank</termLexiconString>
+        <termLexiconString>net metering</termLexiconString>
     </owl:NamedIndividual>
     
 
@@ -587,7 +585,6 @@
         <termHasMeaningByContext rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#ContextDERHousehold"/>
         <termSentBy rdf:resource="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#actorCoal"/>
         <termLexiconString>Storage</termLexiconString>
-        <termMeaningString></termMeaningString>
     </owl:NamedIndividual>
     
 
