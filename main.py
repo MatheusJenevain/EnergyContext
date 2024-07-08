@@ -40,8 +40,8 @@ def load_pdf_data(file_path):
         raise FileNotFoundError("Upload a PDF file")
 
 
-def setup_qa_chain(chunks, local_model="mistral"):
-    """Sets up the question-answering chain using Ollama embeddings and LLM."""
+def setup_qa_chain(chunks, userContext, local_model="mistral"):
+    """Sets up the question-answering chain with userContext variable."""
     vector_db = Chroma.from_documents(
         documents=chunks,
         embedding=OllamaEmbeddings(model="nomic-embed-text", show_progress=True),
@@ -49,10 +49,10 @@ def setup_qa_chain(chunks, local_model="mistral"):
     )
 
     QUERY_PROMPT = PromptTemplate(
-        input_variables=["question"],
-        template="""answer_prompt_template = You are an expert in electrial engineering.
+        input_variables=["question", "userContext"],
+        template=f"""answer_prompt_template = You are an expert in electrial engineering, working in the {userContext} field.
         Using only the information provided in the context, choose the best answer, and only that, to the following question:
-        Original question: {question}""",
+        Original question: {{question}}""",
     )
 
     llm = ChatOllama(model=local_model)
@@ -72,6 +72,11 @@ def setup_qa_chain(chunks, local_model="mistral"):
         | llm
         | StrOutputParser()
     )
+    print(
+        f"""answer_prompt_template = You are an expert in electrial engineering, working in the {userContext} field.
+        Using only the information provided in the context, choose the best answer, and only that, to the following question:
+        Original question: {{question}}"""
+    )
     return chain
 
 
@@ -84,6 +89,7 @@ def update_ontology(onto, individuals_to_update, chain, file_path):
         chain: The Langchain QA chain for generating answers.
         file_path: The path to the OWL file where updates will be saved.
     """
+
     with onto:
         for individual in individuals_to_update:
             try:
@@ -111,7 +117,9 @@ def update_ontology(onto, individuals_to_update, chain, file_path):
                         answer = chain.invoke(lexicon_question)
                         print("Question:", lexicon_question)
                         print(term_lexicon_string_value, ":", answer)
-                        individual.termMeaningString.append(answer)
+                        individual.termMeaningString.append(
+                            answer
+                        )  # Append answer as list
                 else:
                     print(
                         f"Warning: termLexiconString is empty or not found for individual {individual.iri}"
@@ -120,8 +128,7 @@ def update_ontology(onto, individuals_to_update, chain, file_path):
             except Exception as e:
                 print(f"Error processing individual {individual.iri}: {e}")
 
-    # Save the updated ontology (only once after ALL updates are done)
-    onto.save(file_path)
+    onto.save(file_path)  # Save the ontology once after all updates
 
 
 def main():
@@ -151,9 +158,6 @@ def main():
     # Load and split PDF
     chunks = load_pdf_data(pdf_path)
 
-    # Setup QA chain
-    chain = setup_qa_chain(chunks)
-
     # List to store individuals to be updated
     individuals_to_update = []
 
@@ -165,16 +169,35 @@ def main():
                     individual, term_sent_by_property.python_name
                 )
                 if actor_coal in term_sent_by_values:
+                    # Get actor_has_context_property value as userContext
+                    if actor_has_context_property in individual.get_properties():
+                        userContext = getattr(
+                            individual, actor_has_context_property.python_name
+                        )
+                        if isinstance(userContext, list):
+                            userContext = " ".join(
+                                userContext
+                            )  # Handle potential list of values
+                    else:
+                        userContext = (
+                            "general electrical engineering"  # Default if not found
+                        )
+
                     if hasattr(individual, "termLexiconString"):
                         if not isinstance(individual.termLexiconString, list):
                             individual.termLexiconString = [
                                 individual.termLexiconString
                             ]
-                    individuals_to_update.append(individual)
+                    individuals_to_update.append(
+                        (individual, userContext)
+                    )  # Store as tuple
 
-    # Update ontology (Make sure to include file_path in this call)
-    update_ontology(onto, individuals_to_update, chain, file_path)
-    print("finished")
+    # Setup QA chain (Pass userContext)
+    for individual, userContext in individuals_to_update:
+        chain = setup_qa_chain(chunks, userContext)
+        update_ontology(
+            onto, [individual], chain, file_path
+        )  # Update for this individual only
 
 
 if __name__ == "__main__":
