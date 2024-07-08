@@ -75,42 +75,53 @@ def setup_qa_chain(chunks, local_model="mistral"):
     return chain
 
 
-def update_ontology(onto, individuals_to_update, chain):
-    """Iterates over individuals, queries the context, and updates the ontology."""
-    for individual in individuals_to_update:
-        with onto:
+def update_ontology(onto, individuals_to_update, chain, file_path):
+    """Iterates over individuals, queries the context, and updates the ontology.
+
+    Args:
+        onto: The loaded owlready2 ontology object.
+        individuals_to_update: A list of individuals to be updated.
+        chain: The Langchain QA chain for generating answers.
+        file_path: The path to the OWL file where updates will be saved.
+    """
+    with onto:
+        for individual in individuals_to_update:
             try:
                 if not individual:
                     print(f"Warning: Individual with IRI {individual.iri} not found.")
                     continue
 
+                term_lexicon_string_value = None
                 if hasattr(individual, "termLexiconString"):
                     term_lexicon_string_value = getattr(individual, "termLexiconString")
                     if isinstance(term_lexicon_string_value, list):
                         term_lexicon_string_value = " ".join(term_lexicon_string_value)
 
-                    if term_lexicon_string_value.strip():
-                        lexicon_question = "What is " + term_lexicon_string_value + "?"
+                if term_lexicon_string_value and term_lexicon_string_value.strip():
+                    lexicon_question = "What is " + term_lexicon_string_value + "?"
 
-                        if (
-                            hasattr(individual, "termMeaningString")
-                            and individual.termMeaningString
-                        ):
-                            print(
-                                f"termMeaningString already exists for {term_lexicon_string_value}. Skipping."
-                            )
-                        else:
-                            answer = chain.invoke(lexicon_question)
-                            print("Question:", lexicon_question)
-                            print(term_lexicon_string_value, ":", answer)
-                            individual.termMeaningString.append(answer)
+                    if (
+                        hasattr(individual, "termMeaningString")
+                        and individual.termMeaningString
+                    ):
+                        print(
+                            f"termMeaningString already exists for {term_lexicon_string_value}. Skipping."
+                        )
                     else:
-                        print(" termLexiconString is empty after joining")
+                        answer = chain.invoke(lexicon_question)
+                        print("Question:", lexicon_question)
+                        print(term_lexicon_string_value, ":", answer)
+                        individual.termMeaningString.append(answer)
                 else:
-                    print(" termLexiconString: Not found")
+                    print(
+                        f"Warning: termLexiconString is empty or not found for individual {individual.iri}"
+                    )
+
             except Exception as e:
                 print(f"Error processing individual {individual.iri}: {e}")
-        onto.save(file_path)
+
+    # Save the updated ontology (only once after ALL updates are done)
+    onto.save(file_path)
 
 
 def main():
@@ -161,8 +172,9 @@ def main():
                             ]
                     individuals_to_update.append(individual)
 
-    # Update ontology
-    update_ontology(onto, individuals_to_update, chain)
+    # Update ontology (Make sure to include file_path in this call)
+    update_ontology(onto, individuals_to_update, chain, file_path)
+    print("finished")
 
 
 if __name__ == "__main__":

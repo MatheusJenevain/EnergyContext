@@ -6,9 +6,7 @@
          xml:base="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted"
          xmlns="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted#">
 
-<owl:Ontology rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted">
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</rdfs:comment>
-</owl:Ontology>
+<owl:Ontology rdf:about="http://www.semanticweb.org/matheus/ontologies/2023/10/oec-extracted"/>
 
 <owl:ObjectProperty rdf:about="#actorHasContext">
   <rdfs:domain rdf:resource="#actor"/>
@@ -177,15 +175,15 @@
 
 <owl:Class rdf:about="#exchangedData"/>
 
+<owl:Class rdf:about="#Sender">
+  <rdfs:subClassOf rdf:resource="#actorRole"/>
+</owl:Class>
+
 <owl:Class rdf:about="#exchangedDataLog">
   <rdfs:subClassOf rdf:resource="#exchangedData"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Receiver">
-  <rdfs:subClassOf rdf:resource="#actorRole"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Sender">
   <rdfs:subClassOf rdf:resource="#actorRole"/>
 </owl:Class>
 
@@ -203,12 +201,12 @@
   <rdfs:subClassOf rdf:resource="#term"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Neutral">
-  <rdfs:subClassOf rdf:resource="#actorRole"/>
-</owl:Class>
-
 <owl:Class rdf:about="#meaning">
   <rdfs:subClassOf rdf:resource="#term"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Neutral">
+  <rdfs:subClassOf rdf:resource="#actorRole"/>
 </owl:Class>
 
 <owl:Class rdf:about="#company">
@@ -313,7 +311,7 @@
   <termHasMeaningByContext rdf:resource="#ContextDERHousehold"/>
   <termSentBy rdf:resource="#actorCoal"/>
   <termLexiconString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storage</termLexiconString>
-  <termMeaningString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Storage refers to the technology or infrastructure used to store energy generated from renewable sources (such as solar, wind, geothermal) for later use. This can help balance supply and demand in the electricity grid by storing excess energy during periods of low consumption and releasing it when demand is high. The type of storage varies, such as batteries, pumped hydroelectric systems, or thermal storage systems like molten salt or ice-based storage.</termMeaningString>
+  <termMeaningString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Storage in the context of renewable energy typically refers to a system or technology that stores excess generated power from renewable sources (such as solar, wind, geothermal) for later use when demand is high. This can help balance supply and demand and improve the overall efficiency and reliability of the grid. Examples of storage technologies include batteries, pumped hydroelectric storage, and thermal storage. The exact definition may vary depending on the context or industry.</termMeaningString>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#actorCoal">
