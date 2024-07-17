@@ -175,15 +175,15 @@
 
 <owl:Class rdf:about="#exchangedData"/>
 
-<owl:Class rdf:about="#Sender">
-  <rdfs:subClassOf rdf:resource="#actorRole"/>
-</owl:Class>
-
 <owl:Class rdf:about="#exchangedDataLog">
   <rdfs:subClassOf rdf:resource="#exchangedData"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Receiver">
+  <rdfs:subClassOf rdf:resource="#actorRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sender">
   <rdfs:subClassOf rdf:resource="#actorRole"/>
 </owl:Class>
 
@@ -201,12 +201,12 @@
   <rdfs:subClassOf rdf:resource="#term"/>
 </owl:Class>
 
-<owl:Class rdf:about="#meaning">
-  <rdfs:subClassOf rdf:resource="#term"/>
-</owl:Class>
-
 <owl:Class rdf:about="#Neutral">
   <rdfs:subClassOf rdf:resource="#actorRole"/>
+</owl:Class>
+
+<owl:Class rdf:about="#meaning">
+  <rdfs:subClassOf rdf:resource="#term"/>
 </owl:Class>
 
 <owl:Class rdf:about="#company">
@@ -301,7 +301,7 @@
   <termHasMeaningByContext rdf:resource="#ContextDERHousehold"/>
   <termSentBy rdf:resource="#actorCoal"/>
   <termLexiconString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net metering</termLexiconString>
-  <termMeaningString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Net metering refers to a policy that allows customers who generate their own electricity from renewable energy sources, such as solar panels, to feed excess electricity back into the grid and receive credits for it. This means that during times when the customer consumes more electricity than they produce (usually at night), they can draw electricity from the grid and reduce their bill by using these credits. In essence, net metering allows customers with renewable energy systems to effectively sell excess power back to the utility company, offsetting their electricity costs.</termMeaningString>
+  <termMeaningString rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Net Metering is a mechanism that allows customers with renewable energy systems, such as solar panels, to feed excess electricity they produce back into the grid, thus offsetting their consumption and receiving credits for future use. In simple terms, when a home or business generates more power than it consumes during a billing cycle, the surplus is fed back into the electrical grid. The energy company then reduces the customer's future bills by the amount of electricity delivered. It encourages the installation of renewable energy systems and helps reduce overall energy consumption from fossil fuel sources.</termMeaningString>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#ExchangedTermStorage">
