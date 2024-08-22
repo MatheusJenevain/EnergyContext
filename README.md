@@ -4,6 +4,10 @@ Required installs and Ollama pulls
 
 pip install --q chromadb
 
+pip install --q transformers
+
+pip install --q owlready2
+
 pip install --q langchain-text-splitters
 
 pip install --q unstructured langchain
